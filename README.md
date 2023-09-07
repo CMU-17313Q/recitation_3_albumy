@@ -36,7 +36,7 @@ $ flask run
 ```
 Test account:
 * email: `admin@helloflask.com`
-* password: `helloflask`
+* password: `17_313_rocks`
 
 ## License
 
