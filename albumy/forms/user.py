@@ -21,7 +21,7 @@ class EditProfileForm(FlaskForm):
                                                           message='The username should contain only a-z, A-Z and 0-9.')])
     website = StringField('Website', validators=[Optional(), Length(0, 255)])
     location = StringField('City', validators=[Optional(), Length(0, 50)])
-    bio = TextAreaField('Bio', validators=[Optional(), Length(0, 120)])
+    bio = TextAreaField('Story of my Life', validators=[Optional(), Length(0, 120)])
     submit = SubmitField()
 
     def validate_username(self, field):
