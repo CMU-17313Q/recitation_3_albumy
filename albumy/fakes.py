@@ -22,11 +22,12 @@ fake = Faker()
 def fake_admin():
     admin = User(name='Grey Li',
                  username='greyli',
+                 #Did this 
                  email='admin@helloflask.com',
                  bio=fake.sentence(),
                  website='http://greyli.com',
                  confirmed=True)
-    admin.set_password('helloflask')
+    admin.set_password('17_313_rocks')
     notification = Notification(message='Hello, welcome to Albumy.', receiver=admin)
     db.session.add(notification)
     db.session.add(admin)
