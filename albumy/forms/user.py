@@ -16,12 +16,13 @@ from albumy.models import User
 
 class EditProfileForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired(), Length(1, 30)])
+    nickname = StringField('Nickname', validators=[DataRequired(), Length(1, 30)])
     username = StringField('Username', validators=[DataRequired(), Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
                                                           message='The username should contain only a-z, A-Z and 0-9.')])
     website = StringField('Website', validators=[Optional(), Length(0, 255)])
     location = StringField('City', validators=[Optional(), Length(0, 50)])
-    bio = TextAreaField('Bio', validators=[Optional(), Length(0, 120)])
+    bio = TextAreaField('Story Of My Life', validators=[Optional(), Length(0, 120)])
     submit = SubmitField()
 
     def validate_username(self, field):
