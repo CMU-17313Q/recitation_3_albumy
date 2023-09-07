@@ -16,7 +16,7 @@ from albumy.models import User
 
 class EditProfileForm(FlaskForm):
     name = StringField('Name', validators=[DataRequired(), Length(1, 30)])
-    nickname = StringField('Nickname', validators=[DataRequired(), Length(1, 30)])
+    nickname = StringField('Nick-name', validators=[DataRequired(), Length(1, 30)])
     username = StringField('Username', validators=[DataRequired(), Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
                                                           message='The username should contain only a-z, A-Z and 0-9.')])
